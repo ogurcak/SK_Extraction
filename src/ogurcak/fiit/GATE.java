@@ -89,7 +89,7 @@ class GATE
 			throw new GateException("Gate is not initialized. Call method \"init()\" to initialization.");
 
 
-		for (Annotation anota : annotations.get("Date")) {
+		for (Annotation anota : annotations.get("SK_DateTime")) {
 			Calendar currentCalendar = (Calendar) sentTime.clone();
 
 
