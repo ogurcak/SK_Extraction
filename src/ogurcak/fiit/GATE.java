@@ -93,7 +93,6 @@ class GATE
 			Calendar currentCalendar = (Calendar) sentTime.clone();
 
 
-
 			if (anota.getFeatures().get("DAY") != null)
 				currentCalendar.set(Calendar.DATE, Integer.parseInt((String) anota.getFeatures().get("DAY")));
 
