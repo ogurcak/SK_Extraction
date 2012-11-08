@@ -1,16 +1,10 @@
 /*
-*  time.jape
+*  DateTime.jape
 *
-* Copyright (c) 1998-2004, The University of Sheffield.
+* This file define new rules to GATE to annotate Slovak format dates and languages
 *
-*  This file is part of GATE (see http://gate.ac.uk/), and is free
-*  software, licenced under the GNU Library General Public License,
-*  Version 2, June 1991 (in the distribution as file licence.html,
-*  and also available at http://gate.ac.uk/gate/licence.html).
-*
-*  Diana Maynard, 10 Sep 2001
+*  Filip Ogurcak, 23 Okt 2012
 * 
-*  $Id: date.jape 12268 2010-02-16 13:26:12Z markagreenwood $
 */
 
 
@@ -153,11 +147,12 @@ Priority: 50
 // 01.07.00 alebo 1.7.2012
   
 (
- (DAY_MONTH_NUM DOT DAY_MONTH_NUM DOT YEAR)
+ (
+ (DAY_MONTH_NUM):DAY DOT (DAY_MONTH_NUM):MONTH DOT (YEAR):YEAR)
  )
 :date
 -->
- :date.SK_DateTime = {kind = "SK_DateTime" rule = "DateYearDot"}
+ :date.SK_DateTime = {kind = "SK_DateTime" rule = "DateYearDot" DAY = :DAY@string MONTH = :MONTH@string YEAR = :YEAR@string}
 
 
 
@@ -168,12 +163,12 @@ Priority: 70
 // 01.07. alebo 1.7. alebo 1.7
   
 (
- (DAY_MONTH_NUM DOT DAY_MONTH_NUM DOT)|
- (DAY_MONTH_NUM DOT DAY_MONTH_NUM)
+ (DAY_MONTH_NUM):DAY DOT (DAY_MONTH_NUM):MONTH 
+ (DOT)?
 )
 :date
 -->
- :date.SK_DateTime = {kind = "SK_DateTime" rule = "DateDot"}
+ :date.SK_DateTime = {kind = "SK_DateTime" rule = "DateDot" DAY = :DAY@string MONTH = :MONTH@string}
  
  
  
@@ -184,11 +179,13 @@ Priority: 60
   
 (
 ({Token.string == "o"} | {Token.string == "okolo"})
-(ONE_DIGIT|TWO_DIGIT) DOT TWO_DIGIT
+(ONE_DIGIT|TWO_DIGIT):HOUR
+DOT 
+(TWO_DIGIT):MINUTE
 )
 :date
 -->
- :date.SK_DateTime = {kind = "SK_DateTime" rule = "WordTimeDot"}
+ :date.SK_DateTime = {kind = "SK_DateTime" rule = "WordTimeDot" HOUR = :HOUR@string MINUTE = :MINUTE@string}
  
  
  
@@ -197,12 +194,19 @@ Priority: 60
  Rule: TimeDigital1
 // 20:14:25
 (
- (ONE_DIGIT|TWO_DIGIT){Token.string == ":"} TWO_DIGIT 
-({Token.string == ":"} TWO_DIGIT)? 
+ (ONE_DIGIT|TWO_DIGIT):HOUR
+ {Token.string == ":"} 
+ (TWO_DIGIT):MINUTE 
+({Token.string == ":"}
+(TWO_DIGIT):SEC
+)? 
 )
 :time
 -->
-:time.SK_DateTime = {kind = "SK_DateTime" rule = "TimeDigital1"}
+:time.SK_DateTime = {kind = "SK_DateTime" rule = "TimeDigital1" HOUR = :HOUR@string MINUTE = :MINUTE@string SEC = :SEC@string}
+
+
+
 
 
 Rule:	TimeDigital2
@@ -212,12 +216,12 @@ Rule:	TimeDigital2
 // 6am
 
 (
- (ONE_DIGIT|TWO_DIGIT) 
+ (ONE_DIGIT|TWO_DIGIT):HOUR 
  (({Token.string == ":"}|{Token.string == "."} |{Token.string == "-"} )
-  TWO_DIGIT)?
- (TIME_AMPM)
+  (TWO_DIGIT):MINUTE )?
+ (TIME_AMPM):AMPM
  (TIME_ZONE)?
 )
 :time
 -->
-:time.SK_DateTime = {kind = "SK_DateTime" rule = "TimeDigital"}
+:time.SK_DateTime = {kind = "SK_DateTime" rule = "TimeDigital" HOUR = :HOUR@string MINUTE = :MINUTE@string AMPM = :AMPM@string}

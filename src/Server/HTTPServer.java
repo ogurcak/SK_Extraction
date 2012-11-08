@@ -341,7 +341,7 @@ public class HTTPServer extends Thread {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void getImplementatios() {
 
-		List<String> foundClasses = new ArrayList<>();
+		List<String> foundClasses = new ArrayList<String>();
 		foundClasses.add("ogurcak.fiit.SK_extractor");
 
 		JSONObject JSONobj = new JSONObject();

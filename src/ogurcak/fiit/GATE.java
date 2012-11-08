@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import Server.Main;
 
 import gate.Annotation;
 import gate.AnnotationSet;
@@ -29,9 +28,9 @@ import gate.util.GateException;
 class GATE
 {
 
-	private static Logger logger = Logger.getLogger(Main.class.getName());
+	private static Logger logger = Logger.getLogger(GATE.class.getName());
 
-	private static final String GATE_HOME = "D:/GATE_Developer_7.0";
+	private static final String GATE_HOME = "$HOME/GATE/";
 
 	private AnnotationSet annotations = null;
 
@@ -48,7 +47,6 @@ class GATE
 		System.setProperty("gate.home", GATE_HOME);
 
 		Gate.init();
-		gate.gui.MainFrame.getInstance().setVisible(false);
 
 		logger.log(Level.INFO, "Gate initialized");
 	}

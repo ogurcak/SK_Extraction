@@ -1,3 +1,13 @@
+/*
+ * Slovak University of Technology in Bratislava, Faculty of Informatics and Information Technologies;
+ * Course: Team project;
+ * Academic year: 2012/13;
+ * Project name: Simulation of demonstration in the city;
+ * Project leader: Ing. Ivan Kapustík;
+ * Authors: STeam (Bc. Britvík Andrej, Bc. Dupa¾ Martin, Bc. Gomola Matej, Bc. Králik Gergely, Bc. Michalec
+ * 		Peter, Bc. Ogurèák Filip, Bc. Palát Peter);
+ */
+
 
 package ogurcak.fiit;
 
@@ -7,10 +17,10 @@ import gate.util.GateException;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.mail.MessagingException;
-
-
 
 
 
@@ -18,6 +28,8 @@ import javax.mail.MessagingException;
 public class SK_extractor extends Extractor.Event
 {
 
+	private static Logger logger = Logger.getLogger(GATE.class.getName());
+	
 	public void analyzeMessage() {
 
 		// set up default name
@@ -39,25 +51,22 @@ public class SK_extractor extends Extractor.Event
 		try {
 			gate.init();
 			gate.startAnnotation((String) message.getContent());
-			
+
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(message.getSentDate());
-			
+
 			List<Calendar> dates = gate.getDates(cal);
-			for(Calendar c: dates){
-				addDateFrom((Calendar)c.clone());
+			for (Calendar c : dates) {
+				addDateFrom((Calendar) c.clone());
 				c.add(Calendar.HOUR, 1);
 				addDateTo(c);
 			}
 		} catch (GateException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Level.INFO, e.getMessage());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Level.INFO, e.getMessage());
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Level.INFO, e.getMessage());
 		}
 
 	}
