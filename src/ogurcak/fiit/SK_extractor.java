@@ -17,8 +17,7 @@ import gate.util.GateException;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 import javax.mail.MessagingException;
 
@@ -62,11 +61,11 @@ public class SK_extractor extends Extractor.Event
 				addDateTo(c);
 			}
 		} catch (GateException e) {
-			logger.log(Level.INFO, e.getMessage());
+			logger.error(e.getMessage());
 		} catch (IOException e) {
-			logger.log(Level.INFO, e.getMessage());
+			logger.error(e.getMessage());
 		} catch (MessagingException e) {
-			logger.log(Level.INFO, e.getMessage());
+			logger.error(e.getMessage());
 		}
 
 	}

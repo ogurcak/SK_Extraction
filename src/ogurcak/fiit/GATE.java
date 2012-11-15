@@ -7,9 +7,7 @@ import java.util.List;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import org.apache.log4j.Logger;
 
 import gate.Annotation;
 import gate.AnnotationSet;
@@ -43,12 +41,12 @@ class GATE
 
 	protected void init() throws GateException {
 
-		logger.log(Level.INFO, "GATE initialization");
+		logger.debug("GATE initialization started");
 		System.setProperty("gate.home", GATE_HOME);
 
 		Gate.init();
 
-		logger.log(Level.INFO, "Gate initialized");
+		logger.debug("Gate initialized");
 	}
 
 
@@ -95,7 +93,7 @@ class GATE
 				currentCalendar.set(Calendar.DATE, Integer.parseInt((String) anota.getFeatures().get("DAY")));
 
 			if (anota.getFeatures().get("MONTH") != null)
-				currentCalendar.set(Calendar.MONTH, Integer.parseInt((String) anota.getFeatures().get("MONTH"))-1);
+				currentCalendar.set(Calendar.MONTH, Integer.parseInt((String) anota.getFeatures().get("MONTH")) - 1);
 
 			if (anota.getFeatures().get("YEAR") != null)
 				currentCalendar.set(Calendar.YEAR, Integer.parseInt((String) anota.getFeatures().get("YEAR")));
@@ -131,7 +129,9 @@ class GATE
 				currentCalendar.add(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
 
 
-			dates.add(currentCalendar);
+			//remove old dates
+			if (currentCalendar.YEAR > sentTime.YEAR && currentCalendar.MONTH > sentTime.MONTH && currentCalendar.DATE > sentTime.DATE)
+				dates.add(currentCalendar);
 		}
 		return dates;
 	}
