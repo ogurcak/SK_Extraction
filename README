@@ -1,1 +1,12 @@
-ahoj
+Event Extractor je doplnok do emailového klienta Thunderbird,
+ktorı je vyvíjanı v rámci bakalárskej a diplomovej práce na Slovenskej technickej univerzite, 
+Fakulte informatiky a informaènıch technológii.
+
+Hlavnou úlohou doplnku je snaha urıchli proces pridávania schôdzok z emailovej komunikácie do kalendára, 
+prièom vyuívané sú pokroèilé metódy extrakcie udalostí. 
+Tento projekt predstavuje jednu z tıchto extrakènıch metód. Konkrétne metódu zameranú na extrakciu udalostí zo slovenskıch emailov.
+
+
+
+Pre viac informácii navštívte:
+http://events.email.ui.sav.sk/
