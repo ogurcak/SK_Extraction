@@ -45,6 +45,7 @@ class GATE
 		System.setProperty("gate.home", GATE_HOME);
 
 		Gate.init();
+//		gate.gui.MainFrame.getInstance().setVisible(true);
 
 		logger.debug("Gate initialized");
 	}
@@ -129,8 +130,6 @@ class GATE
 				currentCalendar.add(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
 
 
-			//remove old dates
-			if (currentCalendar.YEAR > sentTime.YEAR && currentCalendar.MONTH > sentTime.MONTH && currentCalendar.DATE > sentTime.DATE)
 				dates.add(currentCalendar);
 		}
 		return dates;
