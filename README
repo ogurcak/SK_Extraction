@@ -1,3 +1,6 @@
+Event Extractor
+===============
+
 Event Extractor je doplnok do emailového klienta Thunderbird,
 ktorı je vyvíjanı v rámci bakalárskej a diplomovej práce na Slovenskej technickej univerzite, 
 Fakulte informatiky a informaènıch technológii.
@@ -12,7 +15,7 @@ https://github.com/ogurcak/EventExtractor/tree/master/app
 
 
 
-Pre viac informácii navštívte:
+### Pre viac informácii navštívte:
 http://events.email.ui.sav.sk/
 
 
@@ -21,8 +24,12 @@ http://events.email.ui.sav.sk/
 
 
 TODO List:
+----------
+
 - pridanie názvov mesiacov do Gazetteera
 - zakomponovanie názvov mesiacov do JAPE pravidiel
-- pridanie slov oznaèujúcich zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...) do Gazettera
-- zakomponovanie slov oznaèujúcich  zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...) do JAPE pravidiel
+- pridanie slov oznaèujúcich zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...) 
+  do Gazettera
+- zakomponovanie slov oznaèujúcich  zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...)
+   do JAPE pravidiel
 - spolu s èasmi udalostí uchováva aj zaèiatoènú a koneènú pozíciu vırazu v texte
