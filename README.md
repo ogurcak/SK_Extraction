@@ -33,3 +33,7 @@ TODO List:
 - zakomponovanie slov oznaèujúcich  zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...)
    do JAPE pravidiel
 - spolu s èasmi udalostí uchováva aj zaèiatoènú a koneènú pozíciu vırazu v texte
+ 
+ 
+  
+**Autor: [Filip Ogurèák](https://plus.google.com/105626894260705295051?rel=author)**
