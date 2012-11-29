@@ -26,7 +26,6 @@ http://events.email.ui.sav.sk/
 TODO List:
 --------------
 
-- pridanie názvov mesiacov do Gazetteera
 - zakomponovanie názvov mesiacov do JAPE pravidiel
 - pridanie slov oznaèujúcich zaèiatok udalosti (zajtra, pozajtra, budúci týždeò, ...) 
   do Gazettera
