@@ -45,7 +45,7 @@ class GATE
 		System.setProperty("gate.home", GATE_HOME);
 
 		Gate.init();
-//		gate.gui.MainFrame.getInstance().setVisible(true);
+		// gate.gui.MainFrame.getInstance().setVisible(true);
 
 		logger.debug("Gate initialized");
 	}
@@ -105,17 +105,17 @@ class GATE
 			if (anota.getFeatures().get("MINUTE") != null)
 				currentCalendar.set(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
 
-			if (anota.getFeatures().get("DAY_OF_WEEK") != null) {
+
+			if (anota.getFeatures().get("AddDAY") != null) {
+				currentCalendar.add(Calendar.DATE, Integer.parseInt((String) anota.getFeatures().get("DAY")));
+				if (anota.getFeatures().get("DAY_OF_WEEK") != null)
+					currentCalendar.set(Calendar.DAY_OF_WEEK, Integer.parseInt((String) anota.getFeatures().get("DAY_OF_WEEK")));
+			} else if (anota.getFeatures().get("DAY_OF_WEEK") != null) {
 				Calendar backup = (Calendar) currentCalendar.clone();
 				currentCalendar.set(Calendar.DAY_OF_WEEK, Integer.parseInt((String) anota.getFeatures().get("DAY_OF_WEEK")));
 				if (backup.DAY_OF_MONTH > currentCalendar.DAY_OF_MONTH)
 					currentCalendar.add(Calendar.DATE, 7);
 			}
-
-
-
-			if (anota.getFeatures().get("AddDAY") != null)
-				currentCalendar.add(Calendar.DATE, Integer.parseInt((String) anota.getFeatures().get("DAY")));
 
 			if (anota.getFeatures().get("AddMONTH") != null)
 				currentCalendar.add(Calendar.MONTH, Integer.parseInt((String) anota.getFeatures().get("MONTH")));
@@ -130,7 +130,7 @@ class GATE
 				currentCalendar.add(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
 
 
-				dates.add(currentCalendar);
+			dates.add(currentCalendar);
 		}
 		return dates;
 	}

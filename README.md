@@ -26,8 +26,7 @@ http://events.email.ui.sav.sk/
 TODO List:
 --------------
 
-- pridanie slov oznaèujúcich zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...) do Gazettera
-- zakomponovanie slov oznaèujúcich  zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...) do JAPE pravidiel
+- optimalizacia a vyhodnotenie mier pokrytia a presnosti
 - spolu s èasmi udalostí uchováva aj zaèiatoènú a koneènú pozíciu vırazu v texte
  
  
