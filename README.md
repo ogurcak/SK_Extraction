@@ -26,11 +26,8 @@ http://events.email.ui.sav.sk/
 TODO List:
 --------------
 
-- zakomponovanie názvov mesiacov do JAPE pravidiel
-- pridanie slov oznaèujúcich zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...) 
-  do Gazettera
-- zakomponovanie slov oznaèujúcich  zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...)
-   do JAPE pravidiel
+- pridanie slov oznaèujúcich zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...) do Gazettera
+- zakomponovanie slov oznaèujúcich  zaèiatok udalosti (zajtra, pozajtra, budúci tıdeò, ...) do JAPE pravidiel
 - spolu s èasmi udalostí uchováva aj zaèiatoènú a koneènú pozíciu vırazu v texte
  
  
