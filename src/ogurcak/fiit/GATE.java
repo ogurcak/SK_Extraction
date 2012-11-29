@@ -66,7 +66,9 @@ class GATE
 
 		gate.CorpusController annie = (CorpusController) gate.util.persistence.PersistenceManager.loadObjectFromFile(new File("app/gate.xgapp"));
 		annie.setCorpus(corpus);
-		annie.execute();
+		logger.debug("Corpus maked. Starting ANNIE");
+		annie.execute();	
+		logger.debug("ANNIE finished");
 		annie.cleanup();
 
 		annotations = document.getAnnotations().get();
@@ -77,7 +79,6 @@ class GATE
 
 
 
-	@SuppressWarnings("static-access")
 	protected List<Calendar> getDates(Calendar sentTime) throws GateException {
 
 		List<Calendar> dates = new ArrayList<Calendar>();
@@ -85,51 +86,47 @@ class GATE
 		if (annotations.isEmpty())
 			throw new GateException("Gate is not initialized. Call method \"init()\" to initialization.");
 
-
 		for (Annotation anota : annotations.get("SK_DateTime")) {
 			Calendar currentCalendar = (Calendar) sentTime.clone();
-
-
-			if (anota.getFeatures().get("DAY") != null)
-				currentCalendar.set(Calendar.DATE, Integer.parseInt((String) anota.getFeatures().get("DAY")));
-
-			if (anota.getFeatures().get("MONTH") != null)
-				currentCalendar.set(Calendar.MONTH, Integer.parseInt((String) anota.getFeatures().get("MONTH")) - 1);
-
-			if (anota.getFeatures().get("YEAR") != null)
-				currentCalendar.set(Calendar.YEAR, Integer.parseInt((String) anota.getFeatures().get("YEAR")));
-
-			if (anota.getFeatures().get("HOUR") != null)
-				currentCalendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt((String) anota.getFeatures().get("HOUR")));
-
-			if (anota.getFeatures().get("MINUTE") != null)
-				currentCalendar.set(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
-
-
+			
 			if (anota.getFeatures().get("AddDAY") != null) {
-				currentCalendar.add(Calendar.DATE, Integer.parseInt((String) anota.getFeatures().get("DAY")));
+				currentCalendar.add(Calendar.DATE, Integer.parseInt((String) anota.getFeatures().get("AddDAY")));
 				if (anota.getFeatures().get("DAY_OF_WEEK") != null)
 					currentCalendar.set(Calendar.DAY_OF_WEEK, Integer.parseInt((String) anota.getFeatures().get("DAY_OF_WEEK")));
 			} else if (anota.getFeatures().get("DAY_OF_WEEK") != null) {
 				Calendar backup = (Calendar) currentCalendar.clone();
 				currentCalendar.set(Calendar.DAY_OF_WEEK, Integer.parseInt((String) anota.getFeatures().get("DAY_OF_WEEK")));
-				if (backup.DAY_OF_MONTH > currentCalendar.DAY_OF_MONTH)
+				if (backup.get(Calendar.DAY_OF_YEAR) >= currentCalendar.get(Calendar.DAY_OF_YEAR))
 					currentCalendar.add(Calendar.DATE, 7);
 			}
 
 			if (anota.getFeatures().get("AddMONTH") != null)
-				currentCalendar.add(Calendar.MONTH, Integer.parseInt((String) anota.getFeatures().get("MONTH")));
-
+				currentCalendar.add(Calendar.MONTH, Integer.parseInt((String) anota.getFeatures().get("AddMONTH")));
+			
 			if (anota.getFeatures().get("AddYEAR") != null)
-				currentCalendar.add(Calendar.YEAR, Integer.parseInt((String) anota.getFeatures().get("YEAR")));
-
+				currentCalendar.add(Calendar.YEAR, Integer.parseInt((String) anota.getFeatures().get("AddYEAR")));
+			
 			if (anota.getFeatures().get("AddHOUR") != null)
-				currentCalendar.add(Calendar.HOUR_OF_DAY, Integer.parseInt((String) anota.getFeatures().get("HOUR")));
-
+				currentCalendar.add(Calendar.HOUR_OF_DAY, Integer.parseInt((String) anota.getFeatures().get("AddHOUR")));
+			
 			if (anota.getFeatures().get("AddMINUTE") != null)
-				currentCalendar.add(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
-
-
+				currentCalendar.add(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("AddMINUTE")));
+			
+			if (anota.getFeatures().get("DAY") != null)
+				currentCalendar.set(Calendar.DATE, Integer.parseInt((String) anota.getFeatures().get("DAY")));
+			
+			if (anota.getFeatures().get("MONTH") != null)
+				currentCalendar.set(Calendar.MONTH, Integer.parseInt((String) anota.getFeatures().get("MONTH")) - 1);
+			
+			if (anota.getFeatures().get("YEAR") != null)
+				currentCalendar.set(Calendar.YEAR, Integer.parseInt((String) anota.getFeatures().get("YEAR")));
+			
+			if (anota.getFeatures().get("HOUR") != null)
+				currentCalendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt((String) anota.getFeatures().get("HOUR")));
+			
+			if (anota.getFeatures().get("MINUTE") != null)
+				currentCalendar.set(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
+			
 			dates.add(currentCalendar);
 		}
 		return dates;

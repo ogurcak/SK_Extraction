@@ -36,7 +36,7 @@ public class SK_extractor extends Extractor.Event
 			addName(message.getSubject());
 		} catch (MessagingException e) {
 			addName("");
-			System.err.println("Error during getting message subject" + e.getMessage());
+			logger.warn("Error during getting message subject" + e.getMessage());
 		}
 
 		// set up default place
@@ -55,6 +55,7 @@ public class SK_extractor extends Extractor.Event
 			cal.setTime(message.getSentDate());
 
 			List<Calendar> dates = gate.getDates(cal);
+			logger.debug("Dates getted");
 			for (Calendar c : dates) {
 				addDateFrom((Calendar) c.clone());
 				c.add(Calendar.HOUR, 1);
