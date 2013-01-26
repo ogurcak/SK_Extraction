@@ -2,11 +2,16 @@
 package ogurcak.fiit;
 
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.List;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import Server.Database;
+
 import org.apache.log4j.Logger;
 
 import gate.Annotation;
@@ -131,5 +136,95 @@ class GATE
 				dates.add(currentCalendar);
 		}
 		return dates;
+	}
+
+
+
+
+
+
+	protected void saveDatesToDatabase(int message_id) {
+
+		for (Annotation anota : annotations.get("SK_DateTime")) {
+
+			try {
+				PreparedStatement preparedStmt = Database
+						.getConnection()
+						.prepareStatement(
+								"INSERT INTO GATE_DateTime (fk_message, type, GATE_id, start, end, DAY, MONTH, YEAR, HOUR, MINUTE, AddDAY, DAY_OF_WEEK, AddMONTH, AddYEAR, AddHOUR, AddMINUTE, kind, rule) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+				preparedStmt.setInt(1, message_id);
+				preparedStmt.setString(2, anota.getType());
+				preparedStmt.setInt(3, anota.getId());
+				preparedStmt.setLong(4, anota.getStartNode().getOffset());
+				preparedStmt.setLong(5, anota.getEndNode().getOffset());
+				
+				if (anota.getFeatures().get("DAY") != null)
+					preparedStmt.setInt(6, Integer.parseInt((String) anota.getFeatures().get("DAY")));
+				else
+					preparedStmt.setNull(6, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("MONTH") != null)
+					preparedStmt.setInt(7, Integer.parseInt((String) anota.getFeatures().get("MONTH")));
+				else
+					preparedStmt.setNull(7, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("YEAR") != null)
+					preparedStmt.setInt(8, Integer.parseInt((String) anota.getFeatures().get("YEAR")));
+				else
+					preparedStmt.setNull(8, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("HOUR") != null)
+					preparedStmt.setInt(9, Integer.parseInt((String) anota.getFeatures().get("HOUR")));
+				else
+					preparedStmt.setNull(9, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("MINUTE") != null)
+					preparedStmt.setInt(10, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
+				else
+					preparedStmt.setNull(10, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("AddDAY") != null)
+					preparedStmt.setInt(11, Integer.parseInt((String) anota.getFeatures().get("AddDAY")));
+				else
+					preparedStmt.setNull(11, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("DAY_OF_WEEK") != null)
+					preparedStmt.setInt(12, Integer.parseInt((String) anota.getFeatures().get("DAY_OF_WEEK")));
+				else
+					preparedStmt.setNull(12, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("AddMONTH") != null)
+					preparedStmt.setInt(13, Integer.parseInt((String) anota.getFeatures().get("AddMONTH")));
+				else
+					preparedStmt.setNull(13, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("AddYEAR") != null)
+					preparedStmt.setInt(14, Integer.parseInt((String) anota.getFeatures().get("AddYEAR")));
+				else
+					preparedStmt.setNull(14, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("AddHOUR") != null)
+					preparedStmt.setInt(15, Integer.parseInt((String) anota.getFeatures().get("AddHOUR")));
+				else
+					preparedStmt.setNull(15, java.sql.Types.INTEGER);
+				
+				if (anota.getFeatures().get("AddMINUTE") != null)
+					preparedStmt.setInt(16, Integer.parseInt((String) anota.getFeatures().get("AddMINUTE")));
+				else
+					preparedStmt.setNull(16, java.sql.Types.INTEGER);
+				
+				preparedStmt.setString(17, (String) anota.getFeatures().get("kind"));
+				preparedStmt.setString(18, (String) anota.getFeatures().get("rule"));
+
+				Database.insert(preparedStmt);
+
+				preparedStmt.close();
+
+			} catch (NumberFormatException e) {
+				logger.warn("Error during integer parssing:" + e);
+			} catch (SQLException e) {
+				logger.warn("Error during database insertion:" + e);
+			}
+		}
 	}
 }

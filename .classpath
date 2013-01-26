@@ -3,55 +3,55 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="log4j"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/EventExtractor/lib/json-org.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/EventExtractor/lib/mail.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/EventExtractor/lib/sqljdbc4.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/ant.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/ant-contrib.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/ant-launcher.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/aopalliance.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/apache-mime4j-core.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/apache-mime4j-dom.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/bcmail-jdk15.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/bcprov-jdk15.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/commons-codec.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/commons-compress.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/commons-io.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/commons-lang.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/commons-logging.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/dom4j.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/fontbox.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/gate-asm.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/gate-compiler-jdt.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/ivy.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/java2html.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/javacc.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/java-getopt.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/jaxen.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/jdom.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/jempbox.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/junit.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/log4j.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/lucene-core.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/metadata-extractor.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/nekohtml.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/pdfbox.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/poi.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/poi-ooxml.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/poi-ooxml-schemas.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/poi-scratchpad.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/spring-aop.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/spring-beans.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/spring-core.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/tika-core.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/tika-parsers.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/wstx-lgpl.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/xercesImpl.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/xmlbeans.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/xmlunit.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/xpp3.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/lib/xstream.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/EventExtractor/extraction_methods/ogurcak.jar"/>
-	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/7. semester/Vyhladavanie informacii/Workspace/GATE/bin/gate.jar"/>
+	<classpathentry kind="lib" path="/EventExtractor/lib/json-org.jar"/>
+	<classpathentry kind="lib" path="/EventExtractor/lib/json.jar"/>
+	<classpathentry kind="lib" path="/EventExtractor/lib/mail.jar" sourcepath="/EventExtractor/lib/mail.jar"/>
+	<classpathentry kind="lib" path="/EventExtractor/lib/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/ant.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/ant-contrib.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/ant-launcher.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/apache-mime4j-core.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/apache-mime4j-dom.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/bcmail-jdk15.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/bcprov-jdk15.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/commons-codec.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/commons-compress.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/commons-io.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/commons-lang.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/dom4j.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/fontbox.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/gate-asm.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/gate-compiler-jdt.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/ivy.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/java2html.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/javacc.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/java-getopt.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/jaxen.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/jempbox.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/junit.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/lucene-core.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/metadata-extractor.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/nekohtml.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/pdfbox.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/poi.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/poi-ooxml.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/poi-ooxml-schemas.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/poi-scratchpad.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/spring-aop.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/spring-beans.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/spring-core.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/tika-core.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/tika-parsers.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/wstx-lgpl.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/xmlbeans.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/xmlunit.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/xpp3.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/lib/xstream.jar"/>
+	<classpathentry kind="lib" path="D:/SkyDrive/Dokumenty/FIIT/8. semester/Diplomový projekt I/Workspace/GATE/bin/gate.jar"/>
+	<classpathentry kind="lib" path="/EventExtractor/lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

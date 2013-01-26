@@ -26,7 +26,6 @@ http://events.email.ui.sav.sk/
 TODO List:
 --------------
 
-- spolu s èasmi udalostí uchováva aj zaèiatoènú a koneènú pozíciu vırazu v texte
 - do anotacii pridat prioritu, na zaklade ktorej budu nasledne usporiadane vysledky
  
  

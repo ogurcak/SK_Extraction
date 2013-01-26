@@ -1,13 +1,3 @@
-/*
- * Slovak University of Technology in Bratislava, Faculty of Informatics and Information Technologies;
- * Course: Team project;
- * Academic year: 2012/13;
- * Project name: Simulation of demonstration in the city;
- * Project leader: Ing. Ivan Kapustík;
- * Authors: STeam (Bc. Britvík Andrej, Bc. Dupa¾ Martin, Bc. Gomola Matej, Bc. Králik Gergely, Bc. Michalec
- * 		Peter, Bc. Ogurèák Filip, Bc. Palát Peter);
- */
-
 
 package ogurcak.fiit;
 
@@ -17,9 +7,13 @@ import gate.util.GateException;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
-import org.apache.log4j.Logger;
 
 import javax.mail.MessagingException;
+
+import org.apache.log4j.Logger;
+
+
+
 
 
 
@@ -28,7 +22,14 @@ public class SK_extractor extends Extractor.Event
 {
 
 	private static Logger logger = Logger.getLogger(GATE.class.getName());
-	
+
+	private GATE gate;
+
+
+
+
+
+
 	public void analyzeMessage() {
 
 		// set up default name
@@ -46,7 +47,7 @@ public class SK_extractor extends Extractor.Event
 		description = "Automatic generated with ogurcak.fiit.SK_extraction method";
 
 		// set up event duration
-		GATE gate = new GATE();
+		gate = new GATE();
 		try {
 			gate.init();
 			gate.startAnnotation((String) message.getContent());
@@ -61,6 +62,7 @@ public class SK_extractor extends Extractor.Event
 				c.add(Calendar.HOUR, 1);
 				addDateTo(c);
 			}
+
 		} catch (GateException e) {
 			logger.error(e.getMessage());
 		} catch (IOException e) {
@@ -68,6 +70,17 @@ public class SK_extractor extends Extractor.Event
 		} catch (MessagingException e) {
 			logger.error(e.getMessage());
 		}
+
+	}
+
+
+
+
+
+
+	public void saveToDatabase() {
+
+		gate.saveDatesToDatabase(getMessageId());
 
 	}
 

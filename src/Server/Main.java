@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 
 
 
+
 /**
  * The main purpose of this project is the analysis of available solutions and
  * creating of application for email client Thunderbird, which at least
