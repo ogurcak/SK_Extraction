@@ -34,14 +34,14 @@ public class SK_extractor extends Extractor.Event
 
 		// set up default name
 		try {
-			addName(message.getSubject());
+			addName(message.getSubject().replaceAll("Fwd: ", "").replaceAll("Re: ", ""));
 		} catch (MessagingException e) {
 			addName("");
 			logger.warn("Error during getting message subject" + e.getMessage());
 		}
 
 		// set up default place
-		addPlace("");
+		
 
 		// set up default description
 		description = "Automatic generated with ogurcak.fiit.SK_extraction method";
@@ -62,6 +62,13 @@ public class SK_extractor extends Extractor.Event
 				c.add(Calendar.HOUR, 1);
 				addDateTo(c);
 			}
+			
+			List<String> places = gate.getLocations();
+			if(places.isEmpty())
+				addPlace("");
+			else
+				for (String place : places)
+					addPlace(place);
 
 		} catch (GateException e) {
 			logger.error(e.getMessage());

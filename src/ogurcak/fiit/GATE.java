@@ -132,6 +132,7 @@ class GATE
 			if (anota.getFeatures().get("MINUTE") != null)
 				currentCalendar.set(Calendar.MINUTE, Integer.parseInt((String) anota.getFeatures().get("MINUTE")));
 
+			//TODO: this makes problems
 			if (currentCalendar.after((Calendar) sentTime))
 				dates.add(currentCalendar);
 		}
@@ -139,6 +140,20 @@ class GATE
 	}
 
 
+	protected List<String> getLocations() throws GateException {
+		List<String> places = new ArrayList<String>();
+
+		if (annotations.isEmpty())
+			throw new GateException("Gate is not initialized. Call method \"init()\" to initialization.");
+
+		for (Annotation anota : annotations.get("SK_Location")) {
+			places.add((String) anota.getFeatures().get("LOCATION"));
+		
+		}
+		
+		return places;
+	}
+	
 
 
 
