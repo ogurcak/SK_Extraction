@@ -370,9 +370,14 @@ public class Analyze
 
 		logger.debug("Getting recepients.");
 		String receivers = "";
-		for (Address address : message.getRecipients(Message.RecipientType.TO)) {
-			receivers = receivers.concat(address + ";");
+		try{
+			for (Address address : message.getRecipients(Message.RecipientType.TO)) {
+				receivers = receivers.concat(address + ";");
+			}
+		}catch(Exception e){
+			logger.warn(e.getMessage());
 		}
+		
 
 		logger.debug("Getting senders.");
 		String senders = "";

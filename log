@@ -1,0 +1,3 @@
+[ERROR:main.Database.java (66) 2014-01-11 17:41:34,543] 
+ Access denied for user 'events'@'localhost' (using password: YES) :Database connection problem.
+
