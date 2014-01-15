@@ -84,8 +84,6 @@ public class ProbabilityGraph
 			nodes.put(name, node);
 		}
 
-		st.close();
-
 		// create edges
 		root.createChildrens(dayNodes);
 		root.createChildrens(nameNodes);
@@ -100,26 +98,14 @@ public class ProbabilityGraph
 
 
 		// train graph
+		rs = st.executeQuery("SELECT userEdited.id FROM userEdited");
 
-		// TODO
+		while (rs.next()) {
+			Long id = rs.getLong("id");
+			root.trainChildrenEdges(id);
+		}
 
-
-		// TODO delete this test data
-		logger.info("ROOT NODE");
-		logger.info(root.toString());
-
-		logger.info("DAYS NODES");
-		for (Node node : dayNodes)
-			logger.info(node.toString());
-
-		logger.info("NAMES NODES");
-		for (Node node : nameNodes)
-			logger.info(node.toString());
-
-		logger.info("PLACE NODES");
-		for (Node node : placeNodes)
-			logger.info(node.toString());
-
+		st.close();
 	}
 
 

@@ -32,8 +32,26 @@ public class Edge
 
 		this.parent = parent;
 		this.children = children;
-		this.goodResults = 1;
-		this.allResults = 10;
+	}
+
+
+
+
+
+
+	public void addResult() {
+
+		this.allResults++;
+	}
+
+
+
+
+
+
+	public void addGoodResult() {
+
+		this.goodResults++;
 	}
 
 
@@ -42,6 +60,8 @@ public class Edge
 
 
 	public Double getProbability() {
+
+		logger.info(this.goodResults + " " + this.allResults);
 
 		if (this.allResults == 0)
 			return 0.0;
@@ -57,6 +77,16 @@ public class Edge
 	public double getBayesProbability() {
 
 		return getProbability() * parent.getProbability();
+	}
+
+
+
+
+
+
+	public Node getChildren() {
+
+		return this.children;
 	}
 
 }
